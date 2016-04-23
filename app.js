@@ -12,8 +12,10 @@ var pool = mysql.createPool({
 
 var app = express();
 
+app.use(express.static('public'));
+
 var requestCount = 0;
-app.get("/", function(req, resp) {
+app.get("/family", function(req, resp) {
 	console.log('Handling request...\t' + ++requestCount);
 
 	pool.query('SELECT * FROM family', function(err, rows, fields) {
