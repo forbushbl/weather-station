@@ -15,10 +15,10 @@ var app = express();
 app.use(express.static('public'));
 
 var requestCount = 0;
-app.get("/family", function(req, resp) {
+app.get("/data", function(req, resp) {
 	console.log('Handling request...\t' + ++requestCount);
 
-	pool.query('SELECT * FROM family', function(err, rows, fields) {
+	pool.query('SELECT * FROM humidity_log ORDER BY time DESC LIMIT 1', function(err, rows, fields) {
 		resp.json(rows);
 	});
 
