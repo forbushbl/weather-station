@@ -2,15 +2,20 @@
 	<head>
 		<title>Weather</title>
 		<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link href="https://fonts.googleapis.com/css?family=Cabin|EB+Garamond" rel="stylesheet">
 	</head>
 	<body>
-		Current Temp: <span id="temp">71</span><br/>
-		Current Humidity: <span id="humidity">32</span>%
+		<span class="gauge">
+			<span id="temp">--</span> &deg;F<br/>
+			<span id="humidity">--</span> %<br/>
+		</span>
 		<br />
 		<br />
 		<br />
-		<br />
-		Last updated <span id="time">...</span>
+		<br />	
+		Updated<br/>
+		<span id="time">--</span>
 		<script src="js/main.js"></script>
 	</body>
 </html>
